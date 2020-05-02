@@ -20,7 +20,9 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         prevRoll1 = 0;
         prevRoll2 = 0;
     } else if(dice1 === 1 || dice2 === 1 || dice1 === 6 && dice2 === 6){
-        playerChange(); 
+        playerChange();
+        prevRoll1 = 0;
+        prevRoll2 = 0;
     } else if (dice1 !== 1 && dice2 !== 1){
         roundScore += (dice1 + dice2);
         document.querySelector('#current-' + activePlayer).textContent = roundScore;
